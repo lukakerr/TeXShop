@@ -1,0 +1,251 @@
+/* needs to be localized */
+
+tiLabelSave				= "Bewaar";
+tiPaletteLabelSave			= "Bewaar";
+tiToolTipSave				= "Bewaar de broncode van het document";
+
+/* tool tips for the default Print item. Different actions depending on the window */
+tiToolTipPrintSource			= "Print de TeX-bron";
+tiToolTipPrint				= "Print het PDF-bestand";
+
+tiLabelTypeset				= "Zet";
+tiPaletteLabelTypeset			= "Zet";
+tiToolTipTypeset			= "Voer zetprogramma uit";
+
+tiLabelSharing				= "Sharing";
+tiPaletteLabelSharing		= "Sharing";
+tiToolTipSharing			= "Share text and pictures";
+
+
+tiLabelProgram				= "Programma";
+tiPaletteLabelProgram			= "Programma";
+tiToolTipProgram			= "Kies zet-programma";
+
+tiLabelTeX				= "TeX";
+tiPaletteLabelTeX			= "TeX";
+tiToolTipTeX				= "Zet de source met plain TeX";
+
+tiLabelLaTeX				= "LaTeX";
+tiPaletteLabelLaTeX			= "LaTeX";
+tiToolTipLaTeX				= "Zet de source met LaTeX";
+
+tiLabelBibTeX				= "BibTeX";
+tiPaletteLabelBibTeX			= "BibTeX";
+tiToolTipBibTeX				= "Voer BibTeX uit";
+
+tiLabelMakeIndex			= "Make Index";
+tiPaletteLabelMakeIndex			= "Make Index";
+tiToolTipMakeIndex			= "Voer MakeIndex uit";
+
+tiLabelMetaPost				= "MetaPost";
+tiPaletteLabelMetaPost			= "MetaPost";
+tiToolTipMetaPost			= "Voer MetaPost uit";
+
+tiLabelConTeX				= "ConTeXt";
+tiPaletteLabelConTeX			= "ConTeXt";
+tiToolTipConTeX				= "Voer ConTeXt uit";
+
+tiLabelMetaFont				= "MetaFont";
+tiPaletteLabelMetaFont			= "MetaFont";
+tiToolTipMetaFont			= "Voer MetaFont uit";
+
+tiLabelPreviousPage			= "Vorige";
+tiPaletteLabelPreviousPage		= "Verwissel vorige pagina";
+tiToolTipPreviousPage			= "Toon vorige pagina";
+
+tiLabelNextPage				= "Volgende";
+tiPaletteLabelNextPage			= "Verwissel volgende pagina";
+tiToolTipNextPage			= "Toon volgende pagina";
+
+tiLabelGotoPage				= "Ga naar pagina";
+tiPaletteLabelGotoPage			= "Ga naar pagina";
+tiToolTipGotoPage			= "Ga naar pagina";
+
+tiLabelMagnification			= "Vergroting";
+tiPaletteLabelMagnification		= "Vergroting";
+tiToolTipMagnification			= "Stel vergroting in";
+
+tiLabelTemplates			= "Sjablonen";
+tiPaletteLabelTemplates			= "Sjablonen";
+tiToolTipTemplates			= "Kies een Sjabloon om in te voegen";
+
+tiLabelTags				= "Markering";
+tiPaletteLabelTags			= "Markering";
+tiToolTipTags				= "Kies een markering om naar toe te scrollen";
+
+tiLabelPreviousPageButton		= "Vorige";
+tiPaletteLabelPreviousPageButton	= "Vorige pagina";
+tiToolTipPreviousPageButton		= "Toon vorige pagina";
+
+tiLabelNextPageButton			= "Volgende";
+tiPaletteLabelNextPageButton		= "Volgende pagina";
+tiToolTipNextPageButton			= "Toon volgende pagina";
+
+tiLabelTypesetEE			= "Zet";
+tiPaletteLabelTypesetEE			= "Zet";
+tiToolTipTypesetEE			= "Voer zetprogramma uit";
+
+tiLabelProgramEE			= "Programma";
+tiPaletteLabelProgramEE			= "Programma";
+tiToolTipProgramEE			= "Kies een zet-programma";
+
+tiLabelAutoComplete			= "Automatisch aanvullen";
+tiPaletteLabelAutoComplete		= "AutoComplete";
+tiToolTipAutoComplete			= "Zet automatisch aanvullen aan/uit";
+
+tiLabelSplit				= "Splits venster";
+tiPaletteLabelSplit			= "Splits venster";
+tiToolTipSplit				= "Splits venster (of juist niet)";
+
+tiLabelSplitKIT				= "Splits venster";
+tiPaletteLabelSplitKIT		= "Splits venster";
+tiToolTipSplitKIT			= "Splits venster (of juist niet)";
+
+tiLabelMacros				= "Macro's";
+tiPaletteLabelMacros			= "Macro's";
+tiToolTipMacros				= "Voer macro uit";
+
+tiLabelMacrosEE				= "Macro's";
+tiPaletteLabelMacrosEE			= "Macro's";
+tiToolTipMacrosEE                       = "Voer macro uit";
+
+tiLabelMouseMode			= "Muismodus";
+tiPaletteLabelMouseMode			= "Muismodus";
+tiToolTipMouseMode			= "Verander de muismodus";
+
+tiLabelSyncMarks			= "SyncMarks";
+tiPaletteLabelSyncMarks			= "Sync Marks";
+tiToolTipSyncMarks			= "Toon Sync Marks";
+
+tiLabelColorIndex				= "ColorIndex";
+tiPaletteLabelColorIndex		= "Color Index";
+tiToolTipColorIndex				= "Commando's Color Index";
+
+tiLabelTypesetKIT				= "Zet";
+tiPaletteLabelTypesetKIT		= "Zet";
+tiToolTipTypesetKIT				= "Voer zetprogramma uit";
+
+tiLabelSearchKIT				= "Zoek";
+tiPaletteLabelSearchKIT         = "Zoek";
+tiToolTipSearchKIT				= "Zoek";
+
+tiLabelSharingKIT				= "Sharing";
+tiPaletteLabelSharingKIT		= "Sharing";
+tiToolTipSharingKIT				= "Share text and images";
+
+
+tiLabelProgramKIT				= "Program";
+tiPaletteLabelProgramKIT		= "Program";
+tiToolTipProgramKIT				= "Kies zetprogramma";
+
+tiLabelPreviousPageKIT			= "Vorige";
+tiPaletteLabelPreviousPageKIT	= "Vorige pagina";
+tiToolTipPreviousPageKIT		= "Toon vorige pagina";
+
+tiLabelNextPageKIT				= "Volgende";
+tiPaletteLabelNextPageKIT		= "Volgende pagina";
+tiToolTipNextPageKIT			= "Toon volgende pagina";
+
+tiLabelPreviousPageButtonKIT		= "Vorige";
+tiPaletteLabelPreviousPageButtonKIT	= "Vorige pagina";
+tiToolTipPreviousPageButtonKIT		= "Toon vorige pagina";
+
+tiLabelNextPageButtonKIT			= "Volgende";
+tiPaletteLabelNextPageButtonKIT		= "Volgende pagina";
+tiToolTipNextPageButtonKIT			= "Toon volgende pagina";
+
+tiLabelGotoPageKIT				= "Ga naar pagina";
+tiPaletteLabelGotoPageKIT		= "Ga naar pagina";
+tiToolTipGotoPageKIT			= "Ga naar pagina";
+
+tiLabelMagnificationKIT			= "Zoomen";
+tiPaletteLabelMagnificationKIT	= "Zoomen";
+tiToolTipMagnificationKIT		= "Stel zoomniveau in";
+
+tiLabelMacrosKIT				= "Macro's";
+tiPaletteLabelMacrosKIT			= "Macro's";
+tiToolTipMacrosKIT              = "Voer macro uit";
+
+tiLabelMouseModeKIT				= "Muismodus";
+tiPaletteLabelMouseModeKIT		= "Muismodus";
+tiToolTipMouseModeKIT			= "Verander de muismodus";
+
+tiLabelSyncMarksKIT				= "SyncMarks";
+tiPaletteLabelSyncMarksKIT		= "Sync Marks";
+tiToolTipSyncMarksKIT			= "Toon Sync Marks";
+
+tiLabelBackForthKIT				= "Vorige/Volgende";
+tiPaletteLabelBackForthKIT		= "Vorige/Volgende";
+tiToolTipBackForthKIT			= "Knoppen Vorige/Volgende";
+
+tiLabelDrawerKIT				= "Navigatiekolom";
+tiPaletteLabelDrawerKIT			= "Navigatiekolom";
+tiToolTipDrawerKIT				= "Toon/verberg navigatiekolom";
+
+tiLabelShowFullPath				= "FullPath";
+tiPaletteLabelShowFullPath		= "FullPath";
+tiToolTipShowFullPath			= "Show Full Path in Window Title";
+
+tiLabelProgramSplit				= "Zet";
+tiPaletteLabelProgramSplit		= "Zet";
+tiToolTipProgramSplit			= "Voer zetprogramma uit";
+
+tiLabelMacrosSplit				= "Macro's";
+tiPaletteLabelMacrosSplit		= "Macro's";
+tiToolTipMacrosSplit			= "Voer macro uit";
+
+tiLabelTagsSplit				= "Markering";
+tiPaletteLabelTagsSplit         = "Markering";
+tiToolTipTagsSplit              = "Kies een markering om naar toe te scrollen";
+
+tiLabelGotoPageSplit			= "Ga naar pagina";
+tiPaletteLabelGotoPageSplit     = "Ga naar pagina";
+tiToolTipGotoPageSplit          = "Ga naar pagina";
+
+tiLabelMagnificationSplit		= "Vergroting";
+tiPaletteLabelMagnificationSplit   = "Vergroting";
+tiToolTipMagnificationSplit     = "Stel vergroting in";
+
+tiLabelColorIndexSplit			= "ColorIndex";
+tiPaletteLabelColorIndexSplit     = "ColorIndex";
+tiToolTipColorIndexSplit          = "Commando's Color Index";
+
+tiLabelAutoCompleteSplit		= "Automatisch aanvullen";
+tiPaletteLabelAutoCompleteSplit   = "Automatisch aanvullen";
+tiToolTipAutoCompleteSplit     = "Zet automatisch aanvullen aan/uit";
+
+tiLabelTemplatesSplit            = "Sjablonen";
+tiPaletteLabelTemplatesSplit            = "Sjablonen";
+tiToolTipTemplatesSplit            = "Kies een Sjabloon om in te voegen";
+
+tiLabelSharingSplit                = "Share Source";
+tiPaletteLabelSharingSplit        = "Share Source";
+tiToolTipSharingSplit            = "Share text and pictures";
+
+tiLabelMouseModeKITSplit                = "Muismodus";
+tiPaletteLabelMouseModeKITSplit        = "Muismodus";
+tiToolTipMouseModeKITSplit            = "Verander de muismodus";
+
+tiLabelSearchKITSplit                = "Zoek";
+tiPaletteLabelSearchKITSplit         = "Zoek";
+tiToolTipSearchKITSplit                = "Zoek";
+
+tiLabelTypesetSplit                = "Zet";
+tiPaletteLabelTypesetSplit            = "Zet";
+tiToolTipTypesetSplit            = "Voer zetprogramma uit";
+
+tiLabelLabels                = "Labels";
+tiPaletteLabelLabels            = "Labels";
+tiToolTipLabels                = "Select a label to scroll to";
+
+tiLabelLabelsSplit                = "Labels";
+tiPaletteLabelLabelsSplit         = "Labels";
+tiToolTipLabelsSplit              = "Select a label to scroll to";
+
+tiLabelUpdate              = "Update";
+tiPaletteLabelUpdate         = "Update";
+tiToolTipUpdate              = "Update tags and labels";
+
+tiLabelUpdateSplit                = "Update";
+tiPaletteLabelUpdateSplit         = "Update";
+tiToolTipUpdateSplit              = "Update tags and labels";

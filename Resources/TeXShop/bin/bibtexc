@@ -1,0 +1,10 @@
+#!/bin/tcsh
+# bibtexc
+# Claus Gerhardt
+#
+# filename without suffix
+
+
+set path= ($path  /Library/TeX/texbin /usr/local/bin  /usr/texbin)
+
+bibtex  "$1"

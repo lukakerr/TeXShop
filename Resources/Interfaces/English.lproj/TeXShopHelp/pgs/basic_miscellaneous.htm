@@ -1,0 +1,157 @@
+<HTML>
+
+<HEAD>
+<META HTTP-EQUIV="content-type" CONTENT="text/html;charset=iso-8859-1">
+<TITLE>Miscellaneous</TITLE>
+<META NAME="copyright" CONTENT="Copyright (c) 2016 Richard Koch under the GNU FDL">
+<META NAME="description" CONTENT="miscellaneous; ascii search">
+<link href="../sty/screen.css" rel="stylesheet" media="all">
+</HEAD>
+
+<BODY>
+		<div id="content_border">
+		<P>
+		This page contains miscellaneous useful commands which have not yet found their natural place in the help system.
+		
+	<ul>
+	<p>
+	<li> The preview window toolbar contains a search field. If this window is active, 
+	the keyboard shortcut Command-F will move the cursor to the field for immediate entry
+	of a search phrase.
+	
+	<p> After the phrase is typed, push RETURN to go to the first occurrence of the phrase in the document. This will also make the main pdfView the first responder, so the selection will be visible in blue. Type command-G to go to the next occurrence, and shift-command-G for a backward search. This is parallel to the corresponding commands for text searches. (Previously, RETURN and SHIFT-RETURN
+	performed these commands, but these require that the search field be the first responder and thus product selections in gray instead of blue.)
+		
+	<p> Suppose you want to search on page 63. Go to that page and select any section of text
+	with at least one letter. After that, searches will begin from that selection.
+	
+	<p> Click in the PDF file to create an empty selection. Then searches will again begin at the start of the document.
+	
+	<p> If a search reaches the end of the document, it will cycle to start at the beginning.
+
+
+	<li>
+	<p> A user complained that his collaborators in Europe insert non-ascii characters into the source document, and asked for a search command which would locate all such characters so they could be edited out. This feature is already present in TeXShop.
+	
+	<p> Select the OgreKit Find Panel using TeXShop Preferences. This panel has powerful features and is activated by most TeXShop users. In particular, it can handle regular expressions.
+	
+	<p> Search for 
+	<dd>
+	<dl> [^[:ascii:]]
+	</dd> 
+	
+	Click the "Regular Expressions" option.
+	
+	<p> Click "Next" to search for  occurrences one by one, or push the "Highlight" button
+	to highlight all non-ascii characters at once. 
+	
+	<p> Similar tricks are possible using other regular expressions. Read about regular expressions on the internet and experiment.
+	
+	<li>
+	<p> TeXShop  has a hidden preference setting to control the "ColorIndex" tool. Type the following command in Terminal to turn this item on by default for each new document:
+	<dd>
+	<dl> defaults write TeXShop IndexColorStart YES 
+	</dd>
+	
+	<li>
+	<p> When either magnifying glass is being used, temporarily pushing the Command, Option, or Control keys will increase the amount of magnification, and temporarily pushing Shift-Command, Shift-Option, Shift-Control will decrease the magnification. 
+	
+	<li>
+	<p> The LaTeX hyperref package adds active links and url's to pdf documents. Many are under author control, but the package automatically links table of contents items to the starts of chapters and sections, and automatically links reference items to the corresponding bibliography entry.
+	
+	<p> TeXShop  makes it easy to understand these links at a glance. If the mouse hovers over a link, a popup window appears for several seconds showing the linked portion of the document. This is particularly useful when checking references in the document.
+	
+	<p> Normally the popup window is on the screen for four seconds and then disappears. If the option key is down when these four seconds are up, the popup window will remain on the screen until the mouse moves.
+	
+	<li> In Sierra and higher, TeXShop supports tabs.
+	
+
+<p> Tabs are not appropriate for all TeX projects. They work best on books and large articles with from five to fifteen chapters or divisions, each introduced with an \include command. Some authors prefer to divide their project into many more pieces, perhaps one file per section, and then associating a tab with each file would product unmanageably many tabs.
+
+<p> TeXShop has two mechanisms to enhance Sierra tab support. The first is very simple. Within the top 20 lines of the root file, add the line
+<dd>
+<dl> % !TEX useTabs
+</dd>
+When this command is given, TeXShop itself searches for \include files to associate with tabs; the mechanism should cover perhaps 70 percent of cases.
+
+<p> This first method allows an optional extension listing short names for the added tabs:
+<dd>
+<dl> % !TEX useTabs (one, two, , a short name, five)
+</dd>
+This additional parameter must be  on the same line as "useTabs", but notice that single lines can wrap in the editor without adding a line feed. The short names are listed inside a pair of round brackets, and are separated by commas. White space at the beginning and end of a short name will be ignored, but a short name can contain more than one word, as in the above example. If the space between two commas is blank, the original name will be used for that file. If the list has fewer names than the number of tabs, original names will be used for the remaining tabs. If the list is longer than the number of tabs, names at the end will be ignored.
+
+
+<p> The second mechanism gives the user considerably more control over the tabs. Within the top 20 lines of the root file, add the line
+<dd>
+<dl> % !TEX useTabsWithFiles
+</dd>
+Below that, within the top 50 lines of the root file, add a line for each tab
+<dd>
+<dl> % !TEX tabbedFile{chapter1/Introduction.tex}  (One)
+</dd> 
+In this command, a path to the file shown in the tab is given in curly brackets. In the example, the path starts from the folder containing the project root file, but see more details below. Notice that the file extension must be included. That is because the second mechanism allows pdf, tiff, jpg, log, aux, and other files as tabs. Authors sometimes give source files long descriptive names, which makes the tab titles very long. The final piece of the above line in round brackets is optional, and gives a shorter tab name. 
+
+<p> Optional short names will only be recognized in High Sierra, because it requires additional Apple API first made available there. Feel free to use the options in Sierra; they will cause no harm there, but will be ignored.
+
+<p> Finally, we list some technical details. The first mechanism searches for \include lines after \begin{document} in the body of the root file. It is common to list files without extensions, and in that case TeXShop adds the extension ".tex" when creating the tab.   In the second mechanism, however, TeXShop will not change the extension given by the user, or add a missing extension, because tab files can have unusual types so the extensions provide crucial information. Both methods create at most 20 tabs and ignore lines which might create more of them. The "useTabs" mechanism only works if the root file has at most 20,000 characters, to avoid very long searches for \include lines in gigantic root files.
+
+<p> If a window with tabs is left open when TeXShop is closed, then the next time TeXShop is opened, macOS opens the window and recreates the tabs. The new tab mechanism recognizes this behavior and lets macOS do the job without itself creating tabs. However, macOS does not understand tabs made from pdf files, graphic files, and a few others, so some of the tabs may be missing.  It is easy to get these tabs back. Close the document and then reopen it. This forces TeXShop to recreate the tabs, and then all tabs come back. Or open the missing files yourself and drag their windows to missing tabs. (This macOS behavior is not a bug; other features of TeXShop depend on it. We cannot have everything.)
+
+<p> Finally, a word about the path information between the curly brackets in the "tabbedFile" magic lines.
+Three types of path strings are recognized. The first are strings that start in the location of the root file. Examples include {chapter1.tex} and {Chapter1/Introduction.tex}. Longer strings of directories are allowed.
+When it sees this sort of string, TeXShop prepends the full path to the folder containing the root file.
+
+<p> Another possibility is a path starting at your home directory, like {~/Galois/Equations.tex}. Here ~ denotes the home directory, so this file is probably not in the project directory.
+
+<p> Finally, TeXShop recognizes full paths like {/Users/koch/Galois/Equations.tex}. 
+
+<p> If you use still more Unix conventions, they may or may not work. No guarantees. Tests suggest that spaces are allowed in both directory names and file names, but I'm loathe to recommend them.
+
+<p> There are a few tricky points. The Finder often lists TeX source files without the ".tex" extension, but this extension is just hidden, not absent. It must be written as part of the tab file path. (During testing, I was confused by this point several times).
+
+<p> When TeXShop is asked to create a tab, it  opens the file exactly as if a user had dragged the file icon to TeXShop and dropped it there. Then the window described in the tab is "tabbed." This creates a few surprising cases that look like bugs but aren't.  For example, then TeXShop opens a dvi file, it actually converts the file to pdf using dvips and Ghostscript, and then opens the pdf file. So tabbing a dvi file will give a pdf file as a tab.
+
+<p> Here is another surprising case. Suppose that you are working on a project named "Galois.tex" and you earlier created a project named "Abel.tex". When you open Galois.tex,  you want Abel.tex as a tab so you can refer to that source file as you write Galois. But if you drop the icon for Galois.tex on TeXShop, both Galois.tex and Galois.pdf will open in separate windows. Similarly dropping the icon for Abel.tex on TeXShop will open Abel.tex and Abel.pdf. After tabbing occurs, you'll have a tabbed window containing Galois.tex and Abel.tex, and you'll have Galois.pdf in a separate window. But you'll also have Abel.pdf in  another window. The existence of this extra pdf file looks like a bug, but isn't.
+
+
+	</ul>
+	
+
+
+	
+	
+	
+		
+
+</div>
+<div id="header_background"></div>
+<div id="header_logo"><a href="../TeXShop%20Help.html"><IMG HEIGHT="40" WIDTH="40" border="0" SRC="../gfx/xicnsc.gif"></a></div>
+<div id="header_chapter">Basic Help</div><div id="header_title">Command Completion</div>
+		<div id="menu_border">
+		<ul>
+				<LI><a href="basic_preliminaries.htm">Preliminaries</a>
+			<LI><a href="basic_installtetex.htm">Installing TeX Live</a>
+			<LI><a href="basic_installtexshop.htm">Installing TeXShop</a>
+			<LI><a href="basic_typesetting.htm">Typesetting Documents</a>
+			<li><a href="basic_alternatetypeset.htm">Alternate Typesetting Mode</a>	
+			<li><a href="basic_spelling.htm">Checking Spelling</a>
+			<li><a href="basic_latexpanel.htm">Latex Panel</a>
+			<li><a href="basic_matrixpanel.htm">Matrix Panel</a>
+			<li><a href="basic_macros.htm">Macros</a>
+			<li><a href="basic_toolbar.htm">Toolbar and Applescript</a>
+			<li><a href="basic_graphics.htm">Including Graphics</a>
+			<li><a href="basic_printing.htm">Printing</a>
+			<li><a href="basic_preferences.htm">Setting Preferences</a>
+			<li><a href="basic_templates.htm">Modifying the Templates Menu</a>
+			<li><a href="basic_edittricks.htm">Editing Tricks</a>
+			<li><a href="basic_autocompletion.htm">Key Bindings</a>
+			<li><a href="basic_commandcompletion.htm">Command Completion </a>
+			<li><a href="basic_miscellaneous.htm">Miscellaneous </a>
+			<li><a href="basic_bugs.htm">Sending Bug Reports</a>
+			<li><a href="basic_websites.htm">Useful Web Sites</a>
+			<li><a href="basic_license.htm">License</a>
+		</UL>
+	</div>
+	</BODY>
+
+</HTML>

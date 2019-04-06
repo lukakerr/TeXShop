@@ -1,0 +1,14 @@
+#!/bin/sh
+# iNoue Koich! (modified by S. Zenitani)
+
+export PATH=$PATH:/Library/TeX/texbin:/usr/texbin:/usr/local/bin
+
+COMMAND=${0##*/}
+PTEX=${COMMAND%2pdf-*}
+ENCODE=${COMMAND#*-}
+JOBNAME=${1##*/}
+JOBNAME=${JOBNAME%.*}
+
+eptex -synctex=1 -file-line-error -kanji=$ENCODE -progname=$PTEX "$1" && \
+dvipdfmx "$JOBNAME.dvi"
+
